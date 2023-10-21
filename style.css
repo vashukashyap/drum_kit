@@ -1,0 +1,185 @@
+body {
+  background-color: #3a3838;
+}
+
+.logo {
+  font-size: 2rem;
+  background: -webkit-linear-gradient(#537ec0, #f92f2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.5rem;
+}
+
+.kit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50vh;
+}
+
+.smalldrum {
+  position: absolute;
+  z-index: -1;
+}
+
+#smd-1 {
+  margin-left: -3rem;
+  rotate: 20deg;
+}
+
+#smd-2 {
+  margin-left: 8rem;
+  rotate: -20deg;
+}
+
+.smd1-anim {
+  animation: shake1 1s infinite;
+}
+@keyframes shake1 {
+  0% {
+    rotate: 20deg;
+  }
+  25% {
+    rotate: 25deg;
+  }
+  50% {
+    rotate: 26deg;
+  }
+  75% {
+    rotate: 19deg;
+  }
+  100% {
+    rotate: 20deg;
+  }
+}
+
+.smd2-anim {
+  animation: shake2 1s infinite;
+}
+@keyframes shake2 {
+  0% {
+    rotate: -20deg;
+  }
+  25% {
+    rotate: -25deg;
+  }
+  50% {
+    rotate: -26deg;
+  }
+  75% {
+    rotate: -19deg;
+  }
+  100% {
+    rotate: -20deg;
+  }
+}
+
+.drumplate-left {
+  width: 10rem;
+  position: absolute;
+}
+
+#drumplateleft-1 {
+  margin-left: -10rem;
+  margin-top: -8rem;
+}
+
+#drumplateleft-2 {
+  margin-left: -10rem;
+  margin-top: -6rem;
+}
+
+.drumplate-right {
+  width: 10rem;
+  position: absolute;
+}
+
+#drumplateright-1 {
+  margin-left: 11rem;
+  margin-top: -8rem;
+}
+
+.plate-shake {
+  animation: plateShake 1s infinite;
+}
+
+@keyframes plateShake {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 5deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+
+.leftplatestand {
+  width: 1rem;
+  height: 20rem;
+  position: absolute;
+  background-color: black;
+  z-index: -1;
+  margin-left: -5.4rem;
+  margin-top: -10rem;
+  border-radius: 25px;
+}
+
+.rightplatestand {
+  width: 1rem;
+  height: 20rem;
+  position: absolute;
+  background-color: black;
+  z-index: -1;
+  margin-left: 15.4rem;
+  margin-top: -10rem;
+  border-radius: 25px;
+}
+
+.instruction {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: white;
+  border: white solid 4px;
+  border-left: 0px;
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.5rem;
+}
+
+.icon {
+  width: 2rem;
+}
+
+.mssg {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mssg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+    color: azure;
+  }
+  .kit {
+    display: none;
+  }
+  .instruction {
+    display: none;
+  }
+}
